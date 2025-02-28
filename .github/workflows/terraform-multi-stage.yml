@@ -41,7 +41,7 @@ jobs:
 
 
       - name: Upload Terraform Plan as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: tfplan
           path: src/terraform/${{ env.TF_BACKEND_KEY }}
@@ -60,7 +60,7 @@ jobs:
       BACKEND_STORAGE_CONTAINER_NAME: ${{ secrets.BACKEND_STORAGE_CONTAINER_NAME }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set environment variables and construct TF_BACKEND_KEY
         working-directory: src/terraform
