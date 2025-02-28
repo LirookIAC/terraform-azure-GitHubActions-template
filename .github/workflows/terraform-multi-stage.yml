@@ -13,6 +13,9 @@ jobs:
       BACKEND_STORAGE_ACCOUNT_NAME: ${{ secrets.BACKEND_STORAGE_ACCOUNT_NAME }}
       BACKEND_STORAGE_CONTAINER_NAME: ${{ secrets.BACKEND_STORAGE_CONTAINER_NAME }}
     steps:
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v2
+
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -59,6 +62,9 @@ jobs:
       BACKEND_STORAGE_ACCOUNT_NAME: ${{ secrets.BACKEND_STORAGE_ACCOUNT_NAME }}
       BACKEND_STORAGE_CONTAINER_NAME: ${{ secrets.BACKEND_STORAGE_CONTAINER_NAME }}
     steps:
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v2
+        
       - name: Checkout code
         uses: actions/checkout@v4
 
